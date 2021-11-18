@@ -1,7 +1,12 @@
 body {
   width: 100%!important;
   height: 100%!important;
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
+  background-image: url('../Assets/Images/BG_Login.png');
+  justify-content:center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: 100%;  
 }
 
 #login {     
@@ -14,19 +19,6 @@ body {
     left: 50%;
     margin-top: -250px;
     margin-left: 150px;
-    border-style: solid;
+    /* border-style: solid; */
     border-radius: 15px;
-}
-
-/* .input-group {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;  
-} */
-
-#wrapper-form {
-  position: relative;
-  top: 90px;
 }

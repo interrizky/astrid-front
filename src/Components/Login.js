@@ -9,11 +9,16 @@ import Swal from 'sweetalert2'
 import 'bootstrap/dist/css/bootstrap.min.css'
 // Custom CSS
 import '../Components/Login.css'
+
+/* image */
+import bgImage from '../Assets/Images/BG_Login.png'
+import imgKiri from '../Assets/Images/Logo_KB_Big.png';
+import imgAstrid from '../Assets/Images/astrid2.jpg'
+
 // Feather-Icon
 const User = require('react-feather/dist/icons/user').default;
 const Key = require('react-feather/dist/icons/key').default;
-// const Eye = require('react-feather/dist/icons/eye').default;
-// const EyeOff = require('react-feather/dist/icons/eye-off').default;
+
 
 class Login extends React.Component {
   state = {
@@ -83,11 +88,16 @@ class Login extends React.Component {
   render() { 
     return(
         <div className="container-fluid">
-            <div className="row login" id="login">
-              <div className="wrapper-image input-group mb-3" style={{"justifyContent": "center", "fontSize": "25px", "fontWeight": "bold", "fontStyle": "italic"}}>
-                <p style={{"margin": "0"}}>Welcome Back!</p>
-              </div>
-              <div className="wrapper-form" id="wrapper-form">
+          <div className="row login-page" id="login-page">
+            <div className="wrapper-kiri col-md-6" style={{ justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+              <img src={imgKiri} alt="LogoKiri" width="500px" height="500px" />
+            </div>
+            <div className="wrapper-kanan col-md-6" style={{ justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+              <div className="wrapper-login" id="login" style={{ backgroundColor: 'white'}}>
+                <div className="wrapper-image">
+                  <img src={imgAstrid} alt="LogoLogin" style={{ width: '300px', height: '300px' }} />
+                </div>
+                <div className="wrapper-form mx-5" id="wrapper-form">
                   <div className="input-group mb-3" style={{ alignItems: "center" }}>
                     <div className="input-group-prepend">
                       <span className="input-group-text" id="basic-addon1">
@@ -113,9 +123,11 @@ class Login extends React.Component {
                     <Link to="/forgot" className="mx-auto" style={{ "margin": "0" }}>Forgot Password ?</Link>
                     {/* <a className="mx-auto" href="/forgot" style={{ "margin": "0" }}>Forgot Password ?</a>       */}
                   </div>  
-              </div> 
-            </div>              
-        </div>   
+                </div> 
+              </div>                 
+            </div>
+          </div>
+        </div>  
     )
   }
 
